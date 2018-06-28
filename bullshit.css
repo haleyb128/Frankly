@@ -1,0 +1,46 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: rgb(39, 78, 39);
+    height: auto;
+    width: auto;
+}
+
+header{
+    background-color: grey;
+    height: 100px;
+    width: 200px;
+    align-content: center;
+    text-align: center;
+    padding-top: 40px;
+    margin-left: 650px;
+
+}
+
+#headerTabs{
+    float: left;
+    margin-left: 250px;
+
+}
+
+.h1, h1 {
+    font-size: 22px;
+    font-weight: bolder;
+    height: 750px;
+    width: unset;
+    margin-bottom: 100px;
+}
+
+p {
+    background-color: white;
+    height: 200px;
+    width: auto;
+}
+
+#lastSearch{
+    padding: 10px;
+
+
+}

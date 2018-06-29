@@ -10,15 +10,37 @@
     margin-bottom: 20px;
 }
 
-
-header{
-    background-color: grey;
-    height: 75px;
-    width: 200px;
-    text-align: center;
-    padding-top: 25px;
+#jumbotron{
     background-color: #8181ec;
 
+}
+
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 1.25rem;
+    width: fit-content;
+    background-color: #8181ec;
+    margin-bottom: 30px;
+}
+
+header {
+    background-color: grey;
+    height: 65px;
+    width: 200px;
+    text-align: center;
+    padding-top: 22px;
+    background-color: white;
+    border-radius: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    background-color: lightgrey;
+    border-radius: 1.25rem;
 }
 
 #headerTabs{

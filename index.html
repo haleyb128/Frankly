@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body class="body">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -22,7 +22,7 @@
     <div role="tabpanel" id="headerTabs">
 
         <div class="jumbotron">
-            <header>Our Header(app name?)</header>
+            <header>Frankly</header>
 
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
@@ -42,75 +42,72 @@
         <!-- Tab panes -->
         <div class="tab-content">
 
-<!--about tab-->
+            <!--about tab-->
             <div role="tabpanel" class="tab-pane fade in active" id="about">
 
-                <h1>Instructions!
-                    <p>
-                        This is the bullshit business jargon/mission statement reader!
-                        <br> We cut through the B.S. of Corperate America so you can see who you're REALLY dealing with!
-                    </p>
-                    <p>
-                        Below are the lastest searches from our app!
-                        <br> To start a new search, find a company mission statement from an about page of a comapny you'd like
-                        to investigate!
-                        <br> Copy and paste their words in the user input box (in the input tab) so we can judge the quality
-                        of their work!
-                        <br> Don't let over used/flowery words trick you! See what a business is actually saying (if anything
-                        at all)!
-                    </p>
-                </h1>
+                <h1>Instructions!</h1>
+                <p>
+                    This is the bullshit business jargon/mission statement reader!
+                    <br> We cut through the B.S. of Corperate America so you can see who you're REALLY dealing with!
+                </p>
+                <p>
+                    Below are the lastest searches from our app!
+                    <br> To start a new search, find a company mission statement from an about page of a comapny you'd like to
+                    investigate!
+                    <br> Copy and paste their words in the user input box (in the input tab) so we can judge the quality of their
+                    work!
+                    <br> Don't let over used/flowery words trick you! See what a business is actually saying (if anything at
+                    all)!
+                </p>
 
-                <div class="container" id="lastSearch">
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            Name
-                        </div>
-                        <div class="col-md-6">
-                            Rating
-                        </div>
-                        <div class="col-md-6">
-                            Key Words
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">Search data:Name</div>
-                        <div class="col-md-6">Search Data:Rating</div>
-                        <div class="col-md-6">Search:Key Words</div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
-                    </div>
-
-                </div>
-
+                <table class="table table-bordered table-striped">
+                    <thead class="thread-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Rating</th>
+                            <th>Key Words</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>GoldmanSacks</td>
+                            <td>Boo you suck</td>
+                            <td>we steal money</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+
             <div role="tabpanel" class="tab-pane fade" id="input">
 
-    <!--Data input tab-->
+                <!--Data input tab-->
                 <form>
                     <div class="form-group">
                         <label for="FormControlInput1">Company Name</label>
@@ -129,51 +126,51 @@
                 </form>
             </div>
 
-<!--results tab-->
+            <!--results tab-->
             <div role="tabpanel" class="tab-pane fade" id="results">
 
-            <div class="container" id="card">
-                <div class="card-group">
-                    <div class="row">
-                        <div class="col-md-6" id="overview">
-                            <div class="card bg-primary">
-                                <div class="card-body text-center">
-                                    <p class="card-text">overview</p>
+                <div class="container" id="card">
+                    <div class="card-group">
+                        <div class="row">
+                            <div class="col-md-6" id="overview">
+                                <div class="card bg-primary">
+                                    <div class="card-body text-center">
+                                        <p class="card-text">overview</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6" id="langChart">
+                                <div class="card bg-warning">
+                                    <div class="card-body text-center">
+                                        <p class="card-text">lang level</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-6" id="langChart">
-                            <div class="card bg-warning">
-                                <div class="card-body text-center">
-                                    <p class="card-text">lang level</p>
+                        <div class="row">
+                            <div class="col-md-6" id="comparisons">
+                                <div class="card bg-success">
+                                    <div class="card-body text-center">
+                                        <p class="card-text">comparisons</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-md-6" id="comparisons">
-                            <div class="card bg-success">
-                                <div class="card-body text-center">
-                                    <p class="card-text">comparisons</p>
+                            <div class="col-md-6" id="sentiment">
+                                <div class="card bg-danger">
+                                    <div class="card-body text-center">
+                                        <p class="card-text">sentiment</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-md-6" id="sentiment">
-                            <div class="card bg-danger">
-                                <div class="card-body text-center">
-                                    <p class="card-text">sentiment</p>
-                                </div>
-                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
 

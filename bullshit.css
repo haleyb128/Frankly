@@ -1,12 +1,15 @@
-body {
+.body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    background-color: rgb(39, 78, 39);
-    height: auto;
-    width: auto;
+    background-color: #babaff;
+    text-align: center;
+    margin-left: 125px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 
 header{
     background-color: grey;
@@ -14,51 +17,52 @@ header{
     width: 200px;
     text-align: center;
     padding-top: 25px;
+    background-color: #8181ec;
 
 }
 
 #headerTabs{
     float: left;
     margin-left: 250px;
+   
 
-}
-
-.h1, h1 {
-    font-size: 22px;
-    font-weight: bolder;
-    height: 750px;
-    width: unset;
-    margin-bottom: 100px;
 }
 
 p {
-    background-color: white;
-    height: 200px;
-    width: auto;
+    margin: 0 0 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: lightgrey;
+    padding: 15px;
 }
 
-#lastSearch{
-    padding: 10px;
-
-
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: #8181ec;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
+
+
 
 #overview{
-background-color: aqua;
+background-color: lightgrey;
 }
 
 #langChart{
-background-color: darkred; 
+background-color: lightgray; 
 
 }
 
 #comparisons{
-background-color: darkblue;
+background-color: lightgray;
 
 }
 
 #sentiment{
-background-color: yellowgreen;
+background-color: lightgrey;
 
 }
 

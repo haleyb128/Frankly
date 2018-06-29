@@ -42,3 +42,27 @@ p {
 
 
 }
+
+#overview{
+background-color: aqua;
+}
+
+#langChart{
+background-color: darkred; 
+
+}
+
+#comparisons{
+background-color: darkblue;
+
+}
+
+#sentiment{
+background-color: yellowgreen;
+
+}
+
+#card{
+padding: 20px;
+background-color: gray;
+}

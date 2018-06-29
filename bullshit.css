@@ -12,42 +12,66 @@
 
 #jumbotron{
     background-color: #8181ec;
+    width: 500px;
+    margin-left: 200px;
 
 }
 
 .jumbotron {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 5px;
-    padding-left: 5px;
     border-radius: 1.25rem;
-    width: fit-content;
-    background-color: #8181ec;
     margin-bottom: 30px;
+    background-color: #8181ec;
+    width: 500px;
+    margin-left: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
 }
 
+
 header {
-    background-color: grey;
-    height: 65px;
-    width: 200px;
-    text-align: center;
-    padding-top: 22px;
+    height: 270px;
+    width: 400px;
+    padding-top: 10px;
     background-color: white;
     border-radius: 1.25rem;
     margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
+#logo{
+    width: 325px;
+    height: 230px;
+    border-radius: 1.25rem;
+
 }
 
 .nav-tabs {
     border-bottom: 1px solid #ddd;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(221, 221, 221);
     background-color: lightgrey;
     border-radius: 1.25rem;
+}
+
+#nav {
+    padding-left: 10px;
+    width: 250px;
+    height: 50px;
+    padding-top: 3px;
+    padding-left: 10px;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: #8181ec;
+    -webkit-text-fill-color: #333;
 }
 
 #headerTabs{
     float: left;
     margin-left: 250px;
-   
-
 }
 
 p {

@@ -61,6 +61,7 @@ header {
     padding-left: 10px;
     width: 250px;
     height: 50px;
+    margin-left: 310px;
     padding-top: 3px;
     padding-left: 10px;
     margin-bottom: 0;
@@ -91,28 +92,26 @@ p {
     margin-top: 5px;
 }
 
-
+#carousel-results{
+    height: 500px;
+    width: 750px;
+    background-color: lightslategrey;
+    margin-bottom: 50px;   
+}
 
 #overview{
-background-color: lightgrey;
+height:250px;
+width: 250px;
 }
-
-#langChart{
-background-color: lightgray; 
-
+#difficulty{
+    height:250px;
+    width: 250px;
 }
-
-#comparisons{
-background-color: lightgray;
-
-}
-
 #sentiment{
-background-color: lightgrey;
-
+    height:250px;
+    width: 250px;
 }
-
-#card{
-padding: 20px;
-background-color: gray;
+#comparisons{
+    height:250px;
+    width: 250px;
 }

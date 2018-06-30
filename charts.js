@@ -1,6 +1,7 @@
 //Individual Sentiment Chart
 var sentimentChart = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
+  responsive: true,
   type: 'pie',
   data: {
     labels: ["Anger", "Fear", "Joy", "Sadness", "Analytical", "Confident", "Tentative"],
@@ -20,14 +21,20 @@ var myChart = new Chart(ctx, {
 });
 //Language Level Chart
 new Chart(document.getElementById("bar-chart"), {
+    responsive: true,
     type: 'bar',
+    options: {
+      title: {
+          display: true,
+          text: 'Readability Level Score'
+      },
     data: {
-      labels: ["Your Input", "5th Grader", "Me", "George W. Bush", "Panda"],
+      labels: ["Your Input", "Fifty Shades of Grey", "Hillary Clinton", "", ""],
       datasets: [
         {
           label: "Level",
           backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-          data: [2478,5267,734,784,433]
+          data: [2478,4.29,,784,433]
         }
       ]
     },
@@ -42,11 +49,17 @@ new Chart(document.getElementById("bar-chart"), {
 //Sentiment Comparison Chart
 var comparisons = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
+  responsive: true,
   type: 'bar',
   data: {
     labels: ["Anger", "Fear", "Joy", "Sadness", "Analytical", "Confident", "Tentative"],
     datasets: [{
       label: 'Your Input',
+      options: {
+        title: {
+            display: true,
+            text: 'Sentiment Comparison'
+        },
       data: [12, 19, 3, 17, 28, 24, 7]
     }, {
       label: 'Wells Fargo',

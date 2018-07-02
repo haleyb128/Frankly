@@ -3,17 +3,16 @@
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    background-color: #babaff;
+    background-color: #029BBD;
     text-align: center;
-    margin-left: 125px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: auto;
 }
+
 
 #jumbotron{
     background-color: #8181ec;
     width: 500px;
-    margin-left: 200px;
+    margin: auto;
 
 }
 
@@ -22,7 +21,7 @@
     margin-bottom: 30px;
     background-color: #8181ec;
     width: 500px;
-    margin-left: 200px;
+    margin: auto;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 50px;
@@ -61,10 +60,12 @@ header {
     padding-left: 10px;
     width: 250px;
     height: 50px;
-    margin-left: 310px;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 3px;
     padding-left: 10px;
-    margin-bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
     list-style: none;
     background-color: #8181ec;
     -webkit-text-fill-color: #333;
@@ -76,11 +77,17 @@ header {
 }
 
 p {
-    margin: 0 0 10px;
+    margin: auto;
     margin-bottom: 20px;
     margin-top: 20px;
     background-color: lightgrey;
     padding: 15px;
+    text-align: left;
+}
+
+#missionStatement{
+margin: auto;
+
 }
 
 .table {
@@ -90,6 +97,7 @@ p {
     background-color: #8181ec;
     margin-bottom: 5px;
     margin-top: 5px;
+    
 }
 
 #carousel-results{

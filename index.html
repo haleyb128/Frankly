@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="bullshit.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="Frankly.css">
     <script src="bullshit.js"></script>
 
 </head>
@@ -18,17 +18,17 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
 
-    <!--here are our page tabs-->
+<!--The Navbar/Header-->
+<nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="navbar">
+
+<!--here are our page tabs-->
+
     <div role="tabpanel" id="headerTabs">
-
-        <div class="jumbotron" id="jumbotron">
-            <header>
-                <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\Frankly Bull Logo.png"
-                    alt="Frankly logo" id="logo">
-            </header>
-        </div>
-
-        <!-- Nav tabs -->
+        <div class="navbar-header">
+    
+    <!--Our Frankly logo-->    
+        <img src="https://github.com/haleyb128/VioletProject1/blob/weaverjt/assets/images/Frankly%20Bull%20Logo.png?raw=true" alt="Frankly logo" id="logo">
+    <!--The Nav-tabs-->
         <ul class="nav nav-tabs" role="tablist" id="nav">
             <li role="presentation" class="active">
                 <a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a>
@@ -40,16 +40,28 @@
                 <a href="#results" aria-controls="results" role="tab" data-toggle="tab">Results</a>
             </li>
         </ul>
+    </div>
+
+    </div>
+</nav>
 
 
-
-        <!-- Tab panes -->
+<!--The content of each tab ("About", "Input", and "Results") is here-->
         <div class="tab-content">
 
-            <!--about tab-->
-            <div role="tabpanel" class="tab-pane fade in active" id="about">
-
-                <table class="table table-bordered table-striped">
+<!--about tab-->
+        <div role="tabpanel" class="tab-pane fade in active" id="about">
+            <div class="row" id="firstRow">
+                <div class="col-md-6">
+                    <h1>
+                        More about the project...
+                    </h1>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                <table class="table table-bordered table-striped" id="lastSearch">
                     <thead class="thread-dark">
                         <tr>
                             <th>#</th>
@@ -91,57 +103,64 @@
                         </tr>
                     </tbody>
                 </table>
-
-                <!--our mission statement w/ a button that runs our code on it so the user can see an example-->
+            </div>
+            <div class="col-md-6">
                 <p id="missionStatement">
 
                     We do a dive deep so we can drill down and provide our users with a 10,000 foot view of the situation on the ground. This
                     method may not be a paradigm shift but, at the end of the day, we at Fankly strive hard to deliver desirable
                     deliverables to our users making full use of our core competency on the material with consideration to
-                    best practice.<br> Perhaps it is blue-sky thinking to consider this project a game-changer. Yet the Frankly
+                    best practice.Perhaps it is blue-sky thinking to consider this project a game-changer. Yet the Frankly
                     team wholly believes in its "talk turkey" style of coding and we are confident that we are not cutting
                     our users a rubber check.
-
-                </p>
+                    <br><br>
+                
                 <button onclick="counterFunction()">Put our words
                     <br> to the test!!</button>
-
-
+                </p>
             </div>
 
+        </div>
+
+    </div>
+
+
+<!--Data input tab-->
             <div role="tabpanel" class="tab-pane fade" id="input">
-                <!--Data input tab-->
-                <h1>Instructions!</h1>
-                <p>
+             
+                <h2>Instructions!</h2>
+                <h3>
                     This is the bullshit business jargon/mission statement reader!
                     <br> We cut through the B.S. of Corperate America so you can see who you're REALLY dealing with!
-                </p>
-                <p>
+                </h3>
+                <h4>
                     To start a new search, find a company mission statement from an about page of a comapny you'd like to investigate!
                     <br> Copy and paste their words in the user input box so we can judge the quality of their statement!
                     <br> Don't let over used/flowery words trick you! See what a business is actually saying (if anything at
                     all)!
-                </p>
+                </h4>
 
                 <form>
                     <div class="form-group">
                         <label for="FormControlInput1">Company Name</label>
                         <input type="text" class="form-control" placeholder="Company Name">
                     </div>
-
                     <div class="form-group">
+                            <label for="eFormControlInput3">Add words to search</label>
+                            <input type="text" class="form-control" placeholder="Add your own words...">
+                        </div>
+
+                    <div class="form-group" id="missionStatementBox">
                         <label for="FormControlInput2">Text to Analyze</label>
                         <textarea class="form-control" rows="3" placeholder="Company bullshit here..."></textarea>
                     </div>
 
-                    <div class="form-group">
-                        <label for="eFormControlInput3">Add words to search</label>
-                        <input type="text" class="form-control" placeholder="Add your own words...">
-                    </div>
+                    
                 </form>
             </div>
 
-            <!--results tab-->
+
+<!--results tab-->
             <div role="tabpanel" class="tab-pane fade" id="results">
                 <div id="carousel-results" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -149,37 +168,26 @@
                         <li data-target="#carousel-results" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel-results" data-slide-to="1"></li>
                         <li data-target="#carousel-results" data-slide-to="2"></li>
-                        <li data-target="#carousel-results" data-slide-to="3"></li>
                     </ol>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\Frank lee.jpeg"
-                                alt="" id="overview">
+                                <canvas id="sentimentChart" width="1600" height="900"></canvas>
                             <div class="carousel-caption">
-                                Overview
+                                Sentiment Chart
                             </div>
                         </div>
                         <div class="item">
-                            <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\FRANKLY.png"
-                                alt="..." id="difficulty">
+                                <canvas id="levelCompareChart" width="1600" height="900"></canvas>
                             <div class="carousel-caption">
-                                Language Difficulty Graph
+                                Language Level Comparison
                             </div>
                         </div>
                         <div class="item">
-                            <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\FRANKLY.png"
-                                alt="..." id="sentiment">
+                                <canvas id="sentimentCompareChart" width="1600" height="900"></canvas>
                             <div class="carousel-caption">
-                                Lang. Sentiment Graph
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\FRANKLY.png"
-                                alt="..." id="comparisons">
-                            <div class="carousel-caption">
-                                Comparisons
+                               Sentiment Comparison
                             </div>
                         </div>
                         Results

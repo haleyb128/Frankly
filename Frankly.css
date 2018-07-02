@@ -1,0 +1,250 @@
+ 
+html {
+    /* Positioning */
+    position: relative;
+  
+    /* Box-model */
+    min-height: 100%;
+  }
+
+.body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    text-align: center;
+    margin: auto;
+    background-position: center;
+}
+  
+/*--------copy pasted----*/
+
+  /* add space for fixed nav */
+  main {
+    margin: 60px 0;
+  }
+
+  /* create styles for use for all white main boxes */
+  .block {
+    background-color: #fff;
+    overflow: auto;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .block-header {
+    /* Typography */
+    color: #4d4d4d;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-weight: bold;
+  }
+  
+  /* override bootstrap hover color and border */
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #4d4d4d;
+  }
+  
+  .navbar {
+    background: white;
+    border-bottom-color: #4d4d4d;
+    border-bottom-width: 10px;
+    border-bottom-style: double;
+  }
+  
+  /* media query for nav background color change */
+  @media only screen and (max-width: 767px) {
+    .navbar-header {
+      /* background-color: #d8eef0; */
+    }
+    #logo {
+      width: 90px;
+    }
+    #about-image {
+      /* Positioning */
+      align-content: center;
+      float: none;
+      clear: both;
+    
+      /* Box-model */
+      width: 200px;
+      margin: 0 20px 10px 0;
+    }
+    #bio{
+      float: left;
+    }
+  }
+/*------------------------------*/
+
+/*Navbar/tab header css*/
+
+.tab-content{
+margin-top: 175px;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-style: double;
+    border-width: medium;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(221, 221, 221);
+    background-color: lightgrey;
+    
+}
+
+#nav {
+    width: 250px;
+    height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 9px;
+    padding-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    background-color: #029BBD;
+    list-style: none;
+    float: right;
+    -webkit-text-fill-color: #333;
+    border-style: double;
+    border-width: medium;
+    border-color: #333;
+}
+
+#navbar{
+    background-color: #D36F35;
+    border-bottom-color: #4d4d4d;
+    border-bottom-width: 10px;
+    border-bottom-style: double;
+}
+
+#headerTabs {
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+/*about tab css*/
+
+#firstRow{
+    margin-bottom: 20px;
+
+}
+
+#lastSearch {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    margin: auto;
+    background-color: #D36F35;
+    border-style: solid;
+    border-width: medium;
+    border-color: #333;
+}    
+
+p {
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: lightgrey;
+    padding: 15px;
+    text-align: left;
+}
+
+#missionStatement {
+    margin: auto;
+    text-align: left;
+    background-color: #029BBD;
+    max-width: 500px;
+    width: 100%;
+    border-style: solid;
+    border-width: medium;
+    border-color: #333;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: #8181ec;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    
+}
+
+/*Input tab css*/
+
+#input{
+
+
+}
+
+h2{
+
+
+}
+
+h3 {
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: lightgrey;
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+}
+
+h4 {
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: lightgrey;
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+}
+
+
+form {
+    margin: auto;
+    width: 50%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+#missionStatementBox{
+height: 400px;
+
+}
+
+/*results tab css*/
+
+#carousel-results {
+    height: auto;
+    width: fit-content;
+    background-color: lightslategrey;
+    margin: auto;
+}
+
+sentimentChart{
+height: fit-content;
+width: fit-content;
+}
+
+levelCompareChart{
+    height: fit-content;
+    width: fit-content;
+}
+
+sentimentCompareChart{
+    height: fit-content;
+    width: fit-content;
+}

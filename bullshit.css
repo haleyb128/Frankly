@@ -1,0 +1,125 @@
+.body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #029BBD;
+    text-align: center;
+    margin: auto;
+}
+
+
+#jumbotron{
+    background-color: #8181ec;
+    width: 500px;
+    margin: auto;
+
+}
+
+.jumbotron {
+    border-radius: 1.25rem;
+    margin-bottom: 30px;
+    background-color: #8181ec;
+    width: 500px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+
+header {
+    height: 270px;
+    width: 400px;
+    padding-top: 10px;
+    background-color: white;
+    border-radius: 1.25rem;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
+#logo{
+    width: 325px;
+    height: 230px;
+    border-radius: 1.25rem;
+
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(221, 221, 221);
+    background-color: lightgrey;
+    border-radius: 1.25rem;
+}
+
+#nav {
+    padding-left: 10px;
+    width: 250px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 3px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style: none;
+    background-color: #8181ec;
+    -webkit-text-fill-color: #333;
+}
+
+#headerTabs{
+    float: left;
+    margin-left: 250px;
+}
+
+p {
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: lightgrey;
+    padding: 15px;
+    text-align: left;
+}
+
+#missionStatement{
+margin: auto;
+
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: #8181ec;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    
+}
+
+#carousel-results{
+    height: 500px;
+    width: 750px;
+    background-color: lightslategrey;
+    margin-bottom: 50px;   
+}
+
+#overview{
+height:250px;
+width: 250px;
+}
+#difficulty{
+    height:250px;
+    width: 250px;
+}
+#sentiment{
+    height:250px;
+    width: 250px;
+}
+#comparisons{
+    height:250px;
+    width: 250px;
+}

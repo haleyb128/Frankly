@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Frankly.css">
+    <script src="bullshit.js"></script>
+
+</head>
+
+<body class="body">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<!--The Navbar/Header-->
+<nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="navbar">
+
+<!--here are our page tabs-->
+
+    <div role="tabpanel" id="headerTabs">
+        <div class="navbar-header">
+    
+    <!--Our Frankly logo-->    
+        <img src="https://github.com/haleyb128/VioletProject1/blob/weaverjt/assets/images/Frankly%20Bull%20Logo.png?raw=true" alt="Frankly logo" id="logo">
+    <!--The Nav-tabs-->
+        <ul class="nav nav-tabs" role="tablist" id="nav">
+            <li role="presentation" class="active">
+                <a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a>
+            </li>
+            <li role="presentation">
+                <a href="#input" aria-controls="input" role="tab" data-toggle="tab">Input</a>
+            </li>
+            <li role="presentation">
+                <a href="#results" aria-controls="results" role="tab" data-toggle="tab">Results</a>
+            </li>
+        </ul>
+    </div>
+
+    </div>
+</nav>
+
+
+<!--The content of each tab ("About", "Input", and "Results") is here-->
+        <div class="tab-content">
+
+<!--about tab-->
+        <div role="tabpanel" class="tab-pane fade in active" id="about">
+            <div class="row" id="firstRow">
+                <div class="col-md-6">
+                    <h1>
+                        More about the project...
+                    </h1>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                <table class="table table-bordered table-striped" id="lastSearch">
+                    <thead class="thread-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Rating</th>
+                            <th>Key Words</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>GoldmanSacks</td>
+                            <td>Boo you suck</td>
+                            <td>we steal money</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <p id="missionStatement">
+
+                    We do a dive deep so we can drill down and provide our users with a 10,000 foot view of the situation on the ground. This
+                    method may not be a paradigm shift but, at the end of the day, we at Fankly strive hard to deliver desirable
+                    deliverables to our users making full use of our core competency on the material with consideration to
+                    best practice.Perhaps it is blue-sky thinking to consider this project a game-changer. Yet the Frankly
+                    team wholly believes in its "talk turkey" style of coding and we are confident that we are not cutting
+                    our users a rubber check.
+                    <br><br>
+                
+                <button onclick="counterFunction()">Put our words
+                    <br> to the test!!</button>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!--Data input tab-->
+            <div role="tabpanel" class="tab-pane fade" id="input">
+             
+                <h2>Instructions!</h2>
+                <h3>
+                    This is the bullshit business jargon/mission statement reader!
+                    <br> We cut through the B.S. of Corperate America so you can see who you're REALLY dealing with!
+                </h3>
+                <h4>
+                    To start a new search, find a company mission statement from an about page of a comapny you'd like to investigate!
+                    <br> Copy and paste their words in the user input box so we can judge the quality of their statement!
+                    <br> Don't let over used/flowery words trick you! See what a business is actually saying (if anything at
+                    all)!
+                </h4>
+
+                <form>
+                    <div class="form-group">
+                        <label for="FormControlInput1">Company Name</label>
+                        <input type="text" class="form-control" placeholder="Company Name">
+                    </div>
+                    <div class="form-group">
+                            <label for="eFormControlInput3">Add words to search</label>
+                            <input type="text" class="form-control" placeholder="Add your own words...">
+                        </div>
+
+                    <div class="form-group" id="missionStatementBox">
+                        <label for="FormControlInput2">Text to Analyze</label>
+                        <textarea class="form-control" rows="3" placeholder="Company bullshit here..."></textarea>
+                    </div>
+
+                    
+                </form>
+            </div>
+
+
+<!--results tab-->
+            <div role="tabpanel" class="tab-pane fade" id="results">
+                <div id="carousel-results" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-results" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-results" data-slide-to="1"></li>
+                        <li data-target="#carousel-results" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                                <canvas id="sentimentChart" width="1600" height="900"></canvas>
+                            <div class="carousel-caption">
+                                Sentiment Chart
+                            </div>
+                        </div>
+                        <div class="item">
+                                <canvas id="levelCompareChart" width="1600" height="900"></canvas>
+                            <div class="carousel-caption">
+                                Language Level Comparison
+                            </div>
+                        </div>
+                        <div class="item">
+                                <canvas id="sentimentCompareChart" width="1600" height="900"></canvas>
+                            <div class="carousel-caption">
+                               Sentiment Comparison
+                            </div>
+                        </div>
+                        Results
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-results" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-results" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

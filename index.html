@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="bullshit.css">
-    <script src="bullshit.js"></script>
+    <script src="charts.js"></script>
 
 </head>
 
@@ -15,6 +16,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
 
@@ -136,7 +138,9 @@
             </div>
 
             <!--results tab-->
-            <div role="tabpanel" class="tab-pane fade" id="results">
+            <div role="tabpanel" class="tab-panel fade" id="results">
+                    
+                    <!-- <canvas id="level-compare-chart" width="1600" height="900"></canvas> -->
                 <div id="carousel-results" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -149,35 +153,38 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\Frank lee.jpeg"
-                                alt="" id="overview">
+                            <!-- <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\Frank lee.jpeg"
+                                alt="" id="overview"> -->
+                                <canvas id="sentiment-chart" width="1600" height="900"></canvas>
                             <div class="carousel-caption">
-                                <canvas id="sentiment-chart"></canvas>
-                                Sentiment
+                                
+                              
                             </div>
                         </div>
-                        <div class="item">
-                            <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\FRANKLY.png"
-                                alt="..." id="key-words">
-                            <div class="carousel-caption">
+                        <!-- <div class="item">
+                            <! <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\FRANKLY.png"
+                                alt="..." id="key-words"> -->
+                            <!-- <div class="carousel-caption">
                                 Key Words
                                 <canvas id="key-words-chart"></canvas>
                             </div>
-                        </div>
+                        </div> --> 
                         <div class="item">
-                            <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\FRANKLY.png"
-                                alt="..." id="language-level">
+                            <canvas id="level-compare-chart" width="1600" height="900"></canvas>
+                            <!-- <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\FRANKLY.png"
+                                alt="..." id="language-level"> -->
                             <div class="carousel-caption">
-                                Language Level Comparisons
-                                <canvas id="level-compare-chart"></canvas>
+                               
+                                
                             </div>
                         </div>
                         <div class="item">
-                            <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\FRANKLY.png"
-                                alt="..." id="comparisons">
+                            <!-- <img src="C:\Users\Jacob Weaver\Documents\codingBootcamp\projects\Group Project1\VioletProject1\assets\images\FRANKLY.png"
+                                alt="..." id="comparisons"> -->
+                                <canvas id="sentiment-compare-chart" width="1600" height="900"></canvas>
                             <div class="carousel-caption">
-                                <canvas id="sentiment-compare-chart"></canvas>
-                                Sentiment Comparisons
+                                
+                               
                             </div>
                         </div>
                         Results

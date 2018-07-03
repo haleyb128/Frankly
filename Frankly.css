@@ -134,7 +134,7 @@ margin-top: 175px;
     background-color: #d19877;
 } */
 #navbar{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-bottom-color: #D36F35;
     border-bottom-width: 10px;
     border-bottom-style: double;
@@ -147,8 +147,12 @@ margin-top: 175px;
 }
 
 /*about tab css*/
+.transparent{
+    opacity:0.6;
+}
 #intro{
     font-size: 17px;
+    font-weight: normal;
     margin-left: 70px;
     margin-right: 70px;
     margin-bottom: 5px;
@@ -157,6 +161,8 @@ margin-top: 175px;
     padding: 0px;
     text-align: left;
     text-indent: 50px;
+    opacity: 1;
+    color: #000000;
 }
 #lead{
     font-size: 25px;
@@ -167,6 +173,7 @@ margin-top: 175px;
     /* background-color: ; */
     padding: 20px;
     text-align: center;
+    opacity: 1;
 }
 #firstRow{
     margin-bottom: 20px;
@@ -179,7 +186,7 @@ margin-top: 175px;
     margin-bottom: 20px;
     margin: auto;
     background-color: rgb(178, 198, 202);
-    margin-top: 15px;
+    margin-top: 20px;
     /* border-style: solid;
     border-width: medium;
     border-color: #333; */
@@ -198,7 +205,7 @@ p {
     margin-bottom: 20px;
     text-align: left;
     background-color: white;
-    max-width: 100%;
+    max-width: 600px;
     width: 100%;
     margin-bottom: 5px;
     margin-top: 0px;

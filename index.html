@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="Frankly.css">
     <script src="bullshit.js"></script>
 
@@ -22,14 +23,15 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="navbar">
 
 <!--here are our page tabs-->
-
-    <div role="tabpanel" id="headerTabs">
+    <div class="container">
+    <!-- <div role="tabpanel" id="headerTabs" class=""> -->
         <div class="navbar-header">
     
     <!--Our Frankly logo-->    
-        <img src="https://github.com/haleyb128/VioletProject1/blob/weaverjt/assets/images/Frankly%20Bull%20Logo.png?raw=true" alt="Frankly logo" id="logo">
+            <img src="assets/images/Frankly%20Bull%20Logo.png" alt="Frankly logo" id="logo">
+        </div>
     <!--The Nav-tabs-->
-        <ul class="nav nav-tabs" role="tablist" id="nav">
+        <ul class="nav navbar-nav ml-auto" role="tablist" id="nav">
             <li role="presentation" class="active">
                 <a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a>
             </li>
@@ -40,9 +42,9 @@
                 <a href="#results" aria-controls="results" role="tab" data-toggle="tab">Results</a>
             </li>
         </ul>
+        </div>
     </div>
-
-    </div>
+    <!-- </div> -->
 </nav>
 
 
@@ -52,9 +54,26 @@
 <!--about tab-->
         <div role="tabpanel" class="tab-pane fade in active" id="about">
             <div class="row" id="firstRow">
-                <div class="col-md-6">
-                    <h1>
-                        More about the project...
+                    <div class= "jumbotron jumbotron-fluid">
+                            <p id="intro">
+                                    We, the people of the Frankly project feel empowered to bring you the very best technology when it comes to converging the business jargon that has become ubiquitous in corporate communications. We have all heard the phrase “someone will be on the ground” and it begs the question “As opposed to in the sky?”
+                            </p>
+                            <p id="intro">
+                                    With that sub-par piece of humor in mind, we decided that this project gave us the bandwidth to uncover business buzz words that, all too often, litter the corporate landscape. "Let's talk turkey," "that's a rubber check," and other such gems can be nauseatingly overused but also a great source of
+                                    humor! Whether it's the oddity of the phrase or that they fondly
+                                    bring to mind "that guy at work who won't stop saying--", these
+                                    buzzwords can be enjoyed and hated in equal measure!
+                            </p>
+                            <p id="intro">
+                                    With Frankly, users can enter a company's mission statement, a
+                                    colleague's droll email, or another piece of corporate communication! We'll provide a count of how many buzz words were used and analyze of the text complexity and sentiment. We also take the big data approach by comparing the text to a list of our favorite buzzwords, just to make sure we circle back and provide you with a firm answer. You can even cover your bases by adding your favorite buzzwords.
+                            </p>
+                            <p class="lead" id="lead">
+                                Enjoy, play around, and poke fun at your co-workers!
+                            </p>
+                    <h1 class="display-4">
+                            
+                            -The Frankly Team
                     </h1>
                 </div>
             </div>
@@ -106,7 +125,6 @@
             </div>
             <div class="col-md-6">
                 <p id="missionStatement">
-
                     We do a dive deep so we can drill down and provide our users with a 10,000 foot view of the situation on the ground. This
                     method may not be a paradigm shift but, at the end of the day, we at Fankly strive hard to deliver desirable
                     deliverables to our users making full use of our core competency on the material with consideration to
@@ -115,7 +133,7 @@
                     our users a rubber check.
                     <br><br>
                 
-                <button onclick="counterFunction()">Put our words
+                <button onclick="counterFunction()" id="test">Put our words
                     <br> to the test!!</button>
                 </p>
             </div>
@@ -172,14 +190,20 @@
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
+                        <div class="item">
+                            <div class="key-word-results"></div>
+                            <div class="carousel-caption">
+                                   Sentiment Comparison
+                            </div>
+                        </div>
                         <div class="item active">
-                                <canvas id="sentimentChart" width="1600" height="900"></canvas>
+                                <canvas id="sentimentChart" class="responsive-canvas"></canvas>
                             <div class="carousel-caption">
                                 Sentiment Chart
                             </div>
                         </div>
                         <div class="item">
-                                <canvas id="levelCompareChart" width="1600" height="900"></canvas>
+                                <canvas id="levelCompareChart" class="responsive-canvas"></canvas>
                             <div class="carousel-caption">
                                 Language Level Comparison
                             </div>

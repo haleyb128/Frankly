@@ -12,11 +12,13 @@ $(document).ready(function () {
             messagingSenderId: "266875945649"
         };
         firebase.initializeApp(config);
-    
+
         var database = firebase.database();
     
         var text;
         var count = 0;
+
+        var readScore = 0
     
         //buzzwords to search for. These are already sent to the firebase list.
     
@@ -119,6 +121,8 @@ $(document).ready(function () {
             })
     
             ///twinword api
+
+
             function twinWord() {
     
                 jQuery.ajaxPrefilter(function (options) {
@@ -127,22 +131,22 @@ $(document).ready(function () {
                     }
                 });
     
-    
+
                 console.log(text);
     
                 var settings = {
                     "async": true,
                     "crossDomain": true,
                     // langauge scoring       
-                    // "url": "https://twinword-language-scoring.p.mashape.com/text/?text=" + text,
+                    "url": "https://twinword-language-scoring.p.mashape.com/text/?text=" + text,
                     // sentiment (tone)
-                    "url": "https://twinword-sentiment-analysis.p.mashape.com/analyze/?text=" + text,
+                    // "url": "https://twinword-sentiment-analysis.p.mashape.com/analyze/?text=" + text,
                     "method": "GET",
                     "headers": {
                         // language scoring key
-                        //    "X-Mashape-Key": "p6H3bvHoQTmshZs5pB8NsAb4AbqOp14vgGBjsnCsoqUkVYSj6D",
+                           "X-Mashape-Key": "p6H3bvHoQTmshZs5pB8NsAb4AbqOp14vgGBjsnCsoqUkVYSj6D",
                         //   sentiment(tone) key
-                        "X-Mashape-Key": "H0BYliWbh8msh1kXcuuKHNPdvCE3p1e0bYWjsnXTwD9V2MsRQw",
+                        // "X-Mashape-Key": "H0BYliWbh8msh1kXcuuKHNPdvCE3p1e0bYWjsnXTwD9V2MsRQw",
     
                         "Accept": "application/json",
                         "Cache-Control": "no-cache",
@@ -153,13 +157,12 @@ $(document).ready(function () {
                 $.ajax(settings).done(function (response) {
                     console.log(response);
                 }).then(function (response) {
-                    // var readScore = response.ten_degree;
-                    var toneType = response.type;
-                    // console.log(readScore);
-                    console.log(toneType);
+                    readScore = response.ten_degree;
+                    // var toneType = response.type;
+                    console.log(readScore);
+                    // console.log(toneType);
+                    chart();
                 })
-    
-    
     
                 // log();
                 tones();
@@ -178,12 +181,6 @@ $(document).ready(function () {
             // var toneArrayArray = [];
             ////////////////////////////////////////////////////////
     
-            // testArray = test.split(" ");
-            // console.log(testArray);
-            // testArray.indexOf(testWord)
-            // testing();
-            // var wordsToCheck = [/hey\stest/gi, "how"];
-            //newArray.pushArray(dataArray1, dataArray2);
     
             // let users input their own words to search for
             if ($("#additionalWords").val() !== "") {
@@ -199,10 +196,6 @@ $(document).ready(function () {
     
                 var word = new RegExp(buzzWordCheck[i], "gi");
                 // var word = new RegExp(wordsToCheck[i], "gi");
-    
-                // if (word.test(text)) {
-                // count++;
-                // console.log(word);
     
                 // var fixed = test.replace( "/" + wordsToCheck[i] + "/g", "<span class='highlight'>" + wordsToCheck[i] + "</span>");
                 // var test = test.replace(word, "<span class='highlight'>" + wordsToCheck[i] + "</span>");
@@ -284,7 +277,7 @@ $(document).ready(function () {
                     });
                 }
     
-                chart();
+                
                 tableDisplay();
             }
     
@@ -326,7 +319,7 @@ $(document).ready(function () {
                 console.log("The read failed: " + errorObject.code);  // If any errors are experienced, log them to console.
             });
     
-            chart();
+            // chart();
         }
         tableDisplay(); // tableDisplay() on load
     
@@ -339,8 +332,7 @@ $(document).ready(function () {
         var analytical = 0;
         var confident = 0;
         var tentative = 0;
-    
-    
+       
         var sentimentChart = $("#sentiment-chart");
         var SentChart;
         
@@ -380,7 +372,7 @@ $(document).ready(function () {
     
             comparisonChart = $("#sentiment-compare-chart");
             comparisonChart.show();
-    
+
             SentChart = new Chart(sentimentChart, {
                 type: 'pie',
                 data: {
@@ -399,7 +391,9 @@ $(document).ready(function () {
     
                 }
             });
-    
+
+            console.log(readScore);
+
             //Language Level Chart
                 LanguageLevelChart = $("#level-compare-chart");
                 LangChart = new Chart(LanguageLevelChart, {
@@ -408,7 +402,7 @@ $(document).ready(function () {
                     labels: ["Your Input", "Goldman Sachs", "Obama's Farewell Speech", "Gettysburg Address", "Average Legal Publication"],
                     datasets: [{
                         backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                        data: [2, 3, 5, 4, 7]
+                        data: [readScore, 3, 5, 4, 7]
                     }]
                 },
                 options: {
@@ -426,28 +420,29 @@ $(document).ready(function () {
                     }
                 }
             });
+
             //Sentiment Comparison Chart
                 comparisonChart = $("#sentiment-compare-chart");
                 compChart = new Chart(comparisonChart, {
                 type: 'bar',
                 data: {
-                    labels: ["Anger", "Disgust", "Joy", "Sadness", "Fear"],
+                    labels: ["Anger", "Fear", "Joy", "Sadness", "Analytical","Confident","tentative"],
                     datasets: [{
                         label: 'Your Input',
                         backgroundColor: ("#3e95cd"),
-                        data: [0.10, 0.10, 0.10, 0.10, 0.10]
+                        data: [anger, fear, joy, sadness, analytical, confident, tentative]
                     }, {
                         label: "Tupac's Speech on Greed",
                         backgroundColor: ("#8e5ea2"),
-                        data: [0.18, 0.60, 0.17, 0.59, 0.13]
+                        data: [0.18, 0.60, 0.17, 0.59, 0.13, 0.55, 0.21]
                     }, {
                         label: 'I Have a Dream Speech',
                         backgroundColor: ("#3cba9f"),
-                        data: [0.12, 0.10, 0.66, 0.51, 0.10]
+                        data: [0.12, 0.10, 0.66, 0.51, 0.10, 0.66, 0.01]
                     }, {
                         label: 'Equifax Apology',
                         backgroundColor: ("#e8c3b9"),
-                        data: [0.11, 0.05, 0.54, 0.20, 0.11]
+                        data: [0.11, 0.05, 0.54, 0.20, 0.11, 0.11, 0.11]
                     }]
                 },
                 options: {

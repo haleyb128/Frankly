@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="name" placeholder="name">
+    <textarea rows="10" cols="50" id="textarea"></textarea>
+    <br>
+    <input type="text" id="additionalWords">
+    <br>
+    <input type="submit" id="submit">
+    <p>BS Count:
+        <span id="count"></span>
+    </p>
+    <div id="append"></div>
+
+    <div id="appendHere"></div>
+
+    <br>
+
+    <script>
+        
+
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBJxD7GITdX1hlYaBVzMxuWZgLS0TDPVS8",
+            authDomain: "project-violet-44fcf.firebaseapp.com",
+            databaseURL: "https://project-violet-44fcf.firebaseio.com",
+            projectId: "project-violet-44fcf",
+            storageBucket: "project-violet-44fcf.appspot.com",
+            messagingSenderId: "266875945649"
+        };
+        firebase.initializeApp(config);
+
+        var database = firebase.database();
+
+                // array.join(" ");
+                // array.split();
+                // var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+                // const result = words.filter(word => word.length > 6);
+                // console.log(result);
+                //indexOf();
+                //index();
+                // new RegExp("a|b", "g");
+
+        var text;
+        // var testArray;
+        // var testArray = ["hey", "how", "are", "you"];
+
+        var count = 0;
+
+        // console.log(testArray.indexOf(testWord));
+        // testArray.splice(1,0, "test");
+        // console.log(testArray);
+
+//buzzwords to search for. These are already sent to the firebase list.
+
+        // var wordsToCheck = ["alignment", "artisan", "at the end of the day", "clear goal",
+        //     "outside the box", "new normal", "diversity", "empower", "empowerment", "global", "globalization",
+        //     "heavy lifting", "robust", "growth", "grow", "leverage", "millennial", "wellness", "streamline",
+        //     "synergy", "impact", "sustainable", "sustainability", "outreach", "roadmap", "strategic",
+        //     "viable", "unpack", "dynamic", "accountable", "invested in", "mindshare",
+        //     "downsizing", "startup", "innovation", "inspiration", "documented", "track record", "unparalleled", "integrity"];
+
+// firebase location
+        var buzzwords = database.ref("buzzWords");
+        // buzzwords.push("shareholder");
+
+// for loop to push new buzzwords to the firebase. Uncomment to add words from a given array to firebase.
+        // for (i = 0; i < wordsToCheck.length; i++) {
+        //    buzzwords.push(wordsToCheck[i]);
+        // }
+
+        // var newWords = [];
+
+        // for (i = 0; i < newWords.length; i++) {
+        //         buzzwords.push(newWords[i]);
+        //     }
+
+// TO DO: make a way to check if a word being push is already in the array, or if an empy string
+// is being passed, and cancel pushing it.
+
+
+// push words from firebase to a local array.
+
+        var buzzWordCheck = [];
+
+        buzzwords.on("child_added", function (childSnap) {
+
+            // console.log(childSnap.val());
+            buzzWordCheck.push(childSnap.val());
+            
+            
+
+        }, function (errorObject) {
+            console.log("The read failed: " + errorObject.code);  // If any errors are experienced, log them to console.
+        });
+
+        setTimeout(function(){console.log("BuzzWords " + buzzWordCheck)}, 2000);
+
+// words found in the text field. The .join concatenates the array so you can display it.
+        var buzzWordsFoundArray = [];
+        var buzzWordsFound = buzzWordsFoundArray.join(", ");
+
+
+// click function that takes the input, parses for words in buzzWordCheck and highlights them.
+// It allows counts each words found and displays it.
+
+        $("#submit").on("click", function () {
+
+            count = 0;
+
+            var name = $("#name").val();
+            buzzWordsFoundArray = [];
+            var readability;
+            var sentiment;
+
+            text = $("#textarea").val();
+            console.log(text);
+
+                // testArray = test.split(" ");
+                // console.log(testArray);
+                // testArray.indexOf(testWord)
+                // testing();
+                // var wordsToCheck = [/hey\stest/gi, "how"];
+                //newArray.pushArray(dataArray1, dataArray2);
+
+
+// let users input their own words to search for
+            if ($("#additionalWords").val() !== "") {
+
+                var aw = $("#additionalWords").val().split(", ");
+                Array.prototype.push.apply(buzzWordCheck, aw);
+                // console.log(wordsToCheck);
+            }
+
+            // /hey\syou/g
+
+            for (i = 0; i < buzzWordCheck.length; i++) {
+
+                var word = new RegExp(buzzWordCheck[i], "gi");
+                    // var word = new RegExp(wordsToCheck[i], "gi");
+
+                    // if (word.test(text)) {
+                    // count++;
+                console.log(word);
+
+                    // var fixed = test.replace( "/" + wordsToCheck[i] + "/g", "<span class='highlight'>" + wordsToCheck[i] + "</span>");
+                    // var test = test.replace(word, "<span class='highlight'>" + wordsToCheck[i] + "</span>");
+                var text = text.replace(word, function (x) {
+                    count++;
+                    console.log("count" + count);
+                    buzzWordsFoundArray.push(x);
+                    return "<span class='highlight'>" + x + "</span>";
+                });
+
+                $("#append").empty();
+                $("#append").append(text);
+
+                console.log(word.test(text));
+
+                $("#count").text(count);
+            }
+
+                buzzWordsFound = buzzWordsFoundArray.join(", ");
+
+
+// if no words are found the data is not pushed to the table(testimonials)/firebase
+            if (count > 0) {
+                //push to  tesimonials
+                database.ref("testimonials").push({
+
+                    name: name,
+                    count: count,
+                    buzzWords: buzzWordsFound,
+                    readability: "",
+                    sentiment: "",
+                });
+            }
+
+            tableDisplay();
+        });
+
+
+
+// table display function. (wrapped in a function so it can be called and kept to most recent tables)
+
+        function tableDisplay(){
+            $("#appendHere").empty();
+            var testimonials = database.ref("testimonials");
+
+            testimonials.orderByKey().limitToLast(5).on("child_added", function (childSnap) {
+
+                var tr = $("<tr>");
+                var th = $("<tr><th>Search Title</th><th>Word Count</th><th>Words Found</th></tr>");
+                var table = $("<table>");
+
+                table.append(th);
+                tr.append(`<td>${childSnap.val().name}</td>`);
+                tr.append(`<td>${childSnap.val().count}</td>`);
+                tr.append(`<td>${childSnap.val().buzzWords}</td>`);
+                table.append(tr);
+                // childSnap.val().name;
+                // childSnap.val().count;
+                // childSnap.val().buzzWords;
+
+                $("#appendHere").append(table);
+
+            }, function (errorObject) {
+                console.log("The read failed: " + errorObject.code);  // If any errors are experienced, log them to console.
+            });
+        }
+        tableDisplay();
+
+    </script>
+</body>
+
+</html>

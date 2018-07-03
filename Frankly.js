@@ -1,9 +1,3 @@
-// needed in header
-// <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-// <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-// <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
-// <script src="frankly.js"></script>
-
 $(document).ready(function () {
     // window.onload = function () {
     
@@ -69,8 +63,8 @@ $(document).ready(function () {
         // click function that takes the input, parses for words in buzzWordCheck and highlights them.
         // It allows counts each words found and displays it.
     
-        $("#submit").on("click", function () {
-    
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
             //destroy chart so they can be redrawn
             // LangChart.destroy();
             // compChart.destroy();

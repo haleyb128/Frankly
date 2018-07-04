@@ -33,55 +33,59 @@ light blue: rgb(178, 198, 202)
   } */
 
   /* create styles for use for all white main boxes */
-  .block {
+  /* .block {
     background-color: #fff;
     overflow: auto;
     padding: 30px;
     margin-bottom: 30px;
-  }
-  
+  } */
+/*   
   .block-header {
     /* Typography */
-    color: #4d4d4d;
+    /* color: #4d4d4d;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
-  }
+  } */ 
   
   /* override bootstrap hover color and border */
-  .navbar .nav-pills > li > a:hover {
-    color: #d19877;
+  .navbar .navbar-nav > li > a:hover {
+    background-color:  rgb(178, 198, 202);
   }
-  .navbar-default .navbar-nav>.active> a{
-    background-color: #029BBD;
-  }
-  
-  .navbar {
-    background: white;
-    border-bottom-color: #4d4d4d;
-    border-bottom-width: 10px;
-    border-bottom-style: double;
+  .navbar .navbar-nav>.active> a{
+    background-color: #d19877;
   }
   
   /* media query for nav background color change */
   @media only screen and (max-width: 767px) {
-    .navbar-header {
-      /* background-color: #d8eef0; */
-    }
     #logo {
-      width: 90px;
+      width: 50px;
     }
-    #about-image {
-      /* Positioning */
-      align-content: center;
-      float: none;
-      clear: both;
-    
-      /* Box-model */
-      width: 200px;
-      margin: 0 20px 10px 0;
+    .body{
+        background-image: none;
+        background-color: #333;
+        background-repeat: no-repeat;
+
+        
+
     }
-    #bio{
-      float: left;
+    #nav {
+        width: 30px;
+        height: 40px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 5px;
+        padding-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: white;
+        list-style: none;
+        float: right;
+        -webkit-text-fill-color: #333;
+        font-size: 12px;
+        /* display: inline; */
+        /* border-style: double;
+        border-width: medium;
+        border-color: #333; */
     }
   }
 /*------------------------------*/
@@ -101,16 +105,6 @@ margin-top: 175px;
     margin-top:5px;
     /* border-style: double;
     border-width: medium; */
-}
-
-.nav-pills {
-    border-bottom: 1px solid #ddd;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(221, 221, 221);
-    background-color: lightgrey;
-    /* float: right;
-     */
 }
 
 #nav {
@@ -146,13 +140,6 @@ margin-top: 175px;
     margin-left: 20px;
     margin-top: 5px;
 }
-/* .two-toned-header-color{
-    background-color: #029BBD;
-    margin-top: 40px;
-    height: 6px;
-    padding-top: 3px;
-    position: fixed;
-} */
 
 /*about tab css*/
 .jumbotron{

@@ -231,25 +231,25 @@ $(document).ready(function () {
                 toneArray.forEach(function (element) {
                     switch (element.toneName) {
                         case "Anger":
-                            anger = element.toneScore;
+                            anger = element.toneScore.toFixed(2);
                             break;
                         case "Fear":
-                            fear = element.toneScore;
+                            fear = element.toneScore.toFixed(2);
                             break;
                         case "Joy":
-                            joy = element.toneScore;
+                            joy = element.toneScore.toFixed(2);
                             break;
                         case "Sadness":
-                            sadness = element.toneScore;
+                            sadness = element.toneScore.toFixed(2);
                             break;
                         case "Analytical":
-                            analytical = element.toneScore;
+                            analytical = element.toneScore.toFixed(2);
                             break;
                         case "Confident":
-                            confident = element.toneScore;
+                            confident = element.toneScore.toFixed(2);
                             break;
                         case "Tentative":
-                            tentative = element.toneScore;
+                            tentative = element.toneScore.toFixed(2);
                     }
                 });
     

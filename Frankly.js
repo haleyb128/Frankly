@@ -291,13 +291,16 @@ $(document).ready(function () {
             $("#lastSearch").empty();
             var testimonials = database.ref("testimonials");
     
-            testimonials.orderByKey().limitToLast(5).on("child_added", function (childSnap) {
+            
     
-                var tr = $("<tr>");
+                
                 var th = $("<tr><th>Search Title</th><th>Word Count</th><th>Words Found</th><th>Anger</th><th>Fear</th><th>Joy</th><th>Sadness</th><th>Analytical</th><th>Confident</th><th>Tentative</th></tr>");
                 var table = $("<table>");
-    
-                table.append(th);
+
+        testimonials.orderByKey().limitToLast(5).on("child_added", function (childSnap) {
+                table.prepend(th);
+                var tr = $("<tr>");
+                
                 tr.append(`<td>${childSnap.val().name}</td>`);
                 tr.append(`<td>${childSnap.val().count}</td>`);
                 tr.append(`<td>${childSnap.val().buzzWords}</td>`);

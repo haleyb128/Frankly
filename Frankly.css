@@ -1,6 +1,6 @@
 /*colors: 
- light orange: #d19877
- orange: #D36F35
+light orange: #d19877, rgb(209, 152, 119)
+ orange: #D36F35, rgb(211, 111, 53)
  blue: #029BBD
 light blue: rgb(178, 198, 202)
  */
@@ -17,10 +17,11 @@ light blue: rgb(178, 198, 202)
     font-size: 20px;
     line-height: 1.42857143;
     color: #333;
-    background-color: #029BBD;
+    background-image: url(assets/images/background1.png);
     text-align: center;
     margin: auto;
-    background-position: center;
+    background-size: 100%;
+    background-attachment: fixed;
 
 }
   
@@ -97,6 +98,7 @@ margin-top: 175px;
     float: left;
     margin-right: 10px;
     margin-bottom: 4px;
+    margin-top:5px;
     /* border-style: double;
     border-width: medium; */
 }
@@ -118,7 +120,7 @@ margin-top: 175px;
     margin-left: auto;
     padding-top: 9px;
     padding-left: 10px;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 10px;
     background-color: white;
     list-style: none;
@@ -134,7 +136,7 @@ margin-top: 175px;
 } */
 #navbar{
     background-color: white;
-    border-bottom-color: #D36F35;
+    border-bottom-color: rgb(211, 111, 53);
     border-bottom-width: 10px;
     border-bottom-style: double;
 }
@@ -142,10 +144,28 @@ margin-top: 175px;
 #headerTabs {
     /* float: left; */
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
+/* .two-toned-header-color{
+    background-color: #029BBD;
+    margin-top: 40px;
+    height: 6px;
+    padding-top: 3px;
+    position: fixed;
+} */
 
 /*about tab css*/
+.jumbotron{
+    background: transparent;
+    background-image: url(assets/images/adult.png);
+    background-size: 100%;
+    
+    
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    overflow: auto;
+    
+}
 #intro{
     font-size: 17px;
     margin-left: 70px;
@@ -156,6 +176,12 @@ margin-top: 175px;
     padding: 0px;
     text-align: left;
     text-indent: 50px;
+    /* font-weight: bold; */
+    /* text-shadow: 2px 2px 2px 2px #fdfbfb; */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* background-image: url(assets/images/whiteBackground.png); */
+
 }
 #lead{
     font-size: 25px;
@@ -164,8 +190,12 @@ margin-top: 175px;
     margin-bottom: 5px;
     margin-top: 5px;
     /* background-color: ; */
-    padding: 20px;
+    padding: 60px;
     text-align: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    /* background-image: url(assets/images/whiteBackground.png); */
 }
 #firstRow{
     margin-bottom: 20px;
@@ -174,16 +204,35 @@ margin-top: 175px;
 
 #lastSearch {
     width: 100%;
-    max-width: 500px;
+    /* max-width: 60%; */
     margin-bottom: 20px;
-    margin: auto;
-    background-color: rgb(178, 198, 202);
+    margin-left: 10px;
+    /* background-color:white; */
     margin-top: 15px;
-    /* border-style: solid;
-    border-width: medium;
-    border-color: #333; */
+    overflow: auto;
+    margin-right: 5px;
+    /* border-style: inset;
+    border-width: 2px;
+    border-color: #D36F35; */
+    /* background-image: url(assets/images/whiteBackground.png); */
+    /* background-color: #029BBD; */
+    
 }    
-
+tr{
+    font-size: 14px;
+    padding: 40px;
+}
+th{
+    font-size: 15px;
+    border-bottom-style: double;
+    border-bottom-color: #D36F35;
+    border-bottom-width: 3px;
+    padding: 10px;
+} 
+td{
+    font-size-adjust: 14px;
+    padding: 10px;
+}
 p {
     margin: auto;
     margin-bottom: 20px;
@@ -196,15 +245,31 @@ p {
 #missionStatement {
     margin-bottom: 20px;
     text-align: left;
-    background-color: white;
+    /* background-image: url(assets/images/whiteBackground.png); */
+    /* background: rgba(209, 152, 119, 0.3); */
     max-width: 100%;
-    width: 100%;
+    width: 90%;
     margin-bottom: 5px;
     margin-top: 0px;
     margin-right: 20px;
+    margin-left: 5px;
+    padding: 20px;
+    font-size: 15px;
+    overflow: auto;
+    /* border-style: inset;
+    border-width: 2px; */
+    /* border-color: #D36F35; */
     /* border-style: solid;
     border-width: medium;
     border-color: #D36F35; */
+}
+#table-mission{
+    /* background: rgba(209, 152, 119, 0.3) */
+    /* margin: 20px; */
+    background: transparent;
+    /* background-image: url(assets/images/whiteBackground.png); */
+    margin-bottom: 70px;
+    background-color: rgba(24, 23, 22, 0.5);
 }
 
 .table {
@@ -220,7 +285,11 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
     width: 40%;
+    background-color: #D36F35;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
 /*Input tab css*/
 
@@ -293,3 +362,37 @@ sentimentCompareChart{
     height: fit-content;
     width: fit-content;
 }
+.footer {
+    /* Positioning */
+    position: absolute;
+    bottom: 0;
+  
+    /* Box-model */
+    width: 100%;
+    height: 60px;
+  
+    /* Visual */
+    background: transparent;
+    /* background-color: #4d4d4d; */
+    margin-top: 40px;
+  }
+  
+  .text-muted-footer {
+    /* Box-model */
+    margin-top: 15px;
+    background-color: #d19877;
+    /* Typography */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  .two-toned-footer-color {
+    /* Box-model */
+    margin-top: 40px;
+    height: 6px;
+    padding-top: 3px;
+  
+    /* Visual */
+    background-color: #D36F35;
+    
+  }

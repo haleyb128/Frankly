@@ -89,7 +89,8 @@ light blue: rgb(178, 198, 202)
 /*Navbar/tab header css*/
 
 .tab-content{
-margin-top: 175px;
+/* margin-top: 175px; */
+margin-top: 120px;
 }
 
 #logo {
@@ -361,6 +362,13 @@ levelCompareChart{
 sentimentCompareChart{
     height: fit-content;
     width: fit-content;
+}
+#key-word-results{
+    padding-top: 15px;
+    color: black;
+}
+.highlight{
+    background-color: yellow;
 }
 .footer {
     /* Positioning */

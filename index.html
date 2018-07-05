@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <link rel="stylesheet" type="text/css" media="screen" href="Frankly.css">
 
     <!--Bootstrap, jquery scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" media="screen" href="Frankly.css">
+
     <!--scripts for the js-->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     <script src="Frankly.js"></script>
@@ -45,7 +45,6 @@
                 <img src="assets/images/Frankly%20Bull%20Logo.png" alt="Frankly logo" id="logo">
 
             </div>
-            
 
             <!--The Nav-tabs-->
 
@@ -70,11 +69,10 @@
                 </li>
 
             </ul>
-            
 
         </div>
-    
-        <!-- </div> -->
+
+        </div>
 
         <!-- </div> -->
 
@@ -88,28 +86,35 @@
         <!--about tab-->
        
         <div role="tabpanel" class="tab-pane fade in active" id="about">
-                
+
             <div class="row" id="firstRow">
 
                 <div class="jumbotron jumbotron-fluid">
 
-                    <!-- <p id="intro">
+                    <p id="intro">
 
                         We, the people of the Frankly project feel empowered to bring you the very best technology when it comes to converging the
                         business jargon that has become ubiquitous in corporate communications. We have all heard the phrase
                         “someone will be on the ground” and it begs the question “As opposed to in the sky?”
 
-                    </p> -->
+                    </p>
 
                     <p id="intro">
 
-                            The Frankly project empowers users to uncover business jargon that has become ubiquitous in corporate communications. We have all heard these common phrases that from a “30,000 foot view” are “real head-scratchers.” This project helps to uncover business buzzwords hiding in your everyday corporate texts.
+                        With that sub-par piece of humor in mind, we decided that this project gave us the bandwidth to uncover business buzz words
+                        that, all too often, litter the corporate landscape. "Let's talk turkey," "that's a rubber check," and other such gems can be nauseatingly overused but also a great source of humor! Whether it's the 
+                        oddity of the phrase or that they fondly bring to mind "that guy at work who won't stop saying--",
+                        these buzzwords can be enjoyed and hated in equal measure!
 
                     </p>
 
                     <p id="intro">
 
-                            With Frankly, simply enter text in the text box. Frankly accepts mission statements, your colleague’s emails, or any other text you want to scan. Frankly provides a buzzword count, an analysis of the complexity and overall sentiment. We take the big data approach by comparing the text you provide to a list of our commonly used buzzwords, just to make sure we circle back and provide you with firm answers.You can even cover your bases by adding your favorite buzzwords.
+                        With Frankly, users can enter a company's mission statement, a colleague's droll email, or another piece of corporate communication!
+                        We'll provide a count of how many buzz words were used and analyze of the text complexity and sentiment.
+                        We also take the big data approach by comparing the text to a list of our favorite buzzwords, just
+                        to make sure we circle back and provide you with a firm answer. You can even cover your bases by
+                        adding your favorite buzzwords.
 
                     </p>
 
@@ -134,38 +139,123 @@
 
 
             <div class="row">
-                <div class="jumbotron jumbotron-fluid"  id="table-mission">
 
-                <div class="col-md-8">
-                    <div id="lastSearch" style="overflow-x:auto;"></div>
+                <div class="col-md-6">
+
+                    <table class="table table-bordered table-striped" id="lastSearch">
+
+                        <thead class="thread-dark">
+
+                            <tr>
+
+                                <th>#</th>
+
+                                <th>Name</th>
+
+                                <th>Rating</th>
+
+                                <th>Key Words</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <th scope="row">1</th>
+
+                                <td>GoldmanSacks</td>
+
+                                <td>Boo you suck</td>
+
+                                <td>we steal money</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th scope="row">2</th>
+
+                                <td>Mark</td>
+
+                                <td>Otto</td>
+
+                                <td>@mdo</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th scope="row">3</th>
+
+                                <td>Mark</td>
+
+                                <td>Otto</td>
+
+                                <td>@mdo</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th scope="row">4</th>
+
+                                <td>Mark</td>
+
+                                <td>Otto</td>
+
+                                <td>@mdo</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th scope="row">5</th>
+
+                                <td>Mark</td>
+
+                                <td>Otto</td>
+
+                                <td>@mdo</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
 
-                    <!-- The comments here are used to prevent new line character from being entered into the ajax requests -->
                     <p id="missionStatement">
-                        We do a dive deep so we can drill down and provide our users with a 10,000 foot view of the situation on the ground.<!-- 
-                        --> This method may not be a paradigm shift but, at the end of the day, we at Fankly strive hard to deliver desirable deliverables<!--
-                        --> to our users making full use of our core competency on the material with consideration to best practice.Perhaps it is blue-sky thinking<!--
-                        --> to consider this project a game-changer. Yet the Frankly team wholly believes in its "talk turkey" style of coding and we are confident that<!--
-                        --> we are not cutting our users a rubber check.
+
+                        We do a dive deep so we can drill down and provide our users with a 10,000 foot view of the situation on the ground. This
+                        method may not be a paradigm shift but, at the end of the day, we at Fankly strive hard to deliver
+                        desirable deliverables to our users making full use of our core competency on the material with consideration
+                        to best practice.Perhaps it is blue-sky thinking to consider this project a game-changer. Yet the
+                        Frankly team wholly believes in its "talk turkey" style of coding and we are confident that we are
+                        not cutting our users a rubber check.
+
+                        <br>
+                        <br>
+
+
+<!--this button needs to be modified-->
+                        <button onclick="counterFunction()" id="test">Put our words
+
+                            <br> to the test!!</button>
+
                     </p>
 
-                    <!--this button needs to be modified-->
-                        <button id="test">Put our words<br> to the test!!</button>
-
-                </div>
                 </div>
 
 
 
             </div>
-            <footer class="footer">
-                    <div class="two-toned-footer-color"></div>
-                    <p class="text-muted text-muted-footer text-center">
-                      &copy; Copyright 2018
-                    </p>
-            </footer>
+
 
 
         </div>
@@ -180,21 +270,14 @@
 
             <h3>
 
-                This is the bullshit business jargon/mission statement reader!
+                Lets get Frank!
 
-                <br> We cut through the B.S. of Corperate America so you can see who you're REALLY dealing with!
+                <br> To start a new search, find a company's mission statement from their about page and copy/paste it into the
+
+                text box below!
 
             </h3>
-
-            <h4>
-
-                To start a new search, find a company mission statement from an about page of a comapny you'd like to investigate!
-
-                <br> Copy and paste their words in the user input box so we can judge the quality of their statement!
-
-                <br> Don't let over used/flowery words trick you! See what a business is actually saying (if anything at all)!
-
-            </h4>
+            
             <form>
                 <div class="form-group">
                     <label for="FormControlInput1">Company Name</label>
@@ -212,12 +295,6 @@
 
 
             </form>
-            <footer class="footer">
-                    <div class="two-toned-footer-color"></div>
-                    <p class="text-muted text-muted-footer text-center">
-                      &copy; Copyright 2018
-                    </p>
-            </footer>
         </div>
 
 
@@ -229,35 +306,29 @@
                     <li data-target="#carousel-results" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-results" data-slide-to="1"></li>
                     <li data-target="#carousel-results" data-slide-to="2"></li>
-                    <li data-target="#carousel-results" data-slide-to="3"></li>
                 </ol>
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <div id="sentiment-div"></div>
-                        <!-- <div class="carousel-caption">
+                        <div class="carousel-caption">
                             Sentiment Chart
-                        </div> -->
+                        </div>
                     </div>
                     <div class="item">
-                        <div id="level-div"></div>
-                        <!-- <div class="carousel-caption">
+                        <div id="level-div"></div>>
+                        <div class="carousel-caption">
                             Language Level Comparison
-                        </div> -->
+                        </div>
                     </div>
                     <div class="item">
                         <div id="sentiment-compare-div"></div>
-                        <!-- <div class="carousel-caption">
+                        <div class="carousel-caption">
                             Sentiment Comparison
-                        </div> -->
+                        </div>
                     </div>
-                    <div class="item">
-                        <div id="key-word-results"></div>
-                        <!-- <div class="carousel-caption">
-                            Key Word Results
-                        </div> -->
-                    </div>
+                    <div id="key-word-results"></div>
                 </div>
 
                 <!-- Controls -->
@@ -270,12 +341,7 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <footer class="footer">
-                    <div class="two-toned-footer-color"></div>
-                    <p class="text-muted text-muted-footer text-center">
-                      &copy; Copyright 2018
-                    </p>
-            </footer>
+
 
         </div>
 

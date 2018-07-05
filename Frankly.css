@@ -208,17 +208,28 @@ margin-top: 175px;
 tr{
     font-size: 14px;
     padding: 40px;
-}
-th{
-    font-size: 15px;
     border-bottom-style: double;
     border-bottom-color: #D36F35;
     border-bottom-width: 3px;
-    padding: 10px;
+}
+td:first-child{
+    border-left-style: double;
+    border-left-color: #D36F35;
+    border-left-width: 2px;
+}
+th{
+    font-size: 12px;
+    border-bottom-style: double;
+    border-bottom-color: #D36F35;
+    border-bottom-width: 2px;
+    padding: 6px;
 } 
 td{
-    font-size-adjust: 14px;
-    padding: 10px;
+    font-size: 12px;
+    padding: 5px;
+    border-right-style: double;
+    border-right-color: #D36F35;
+    border-right-width: 2px;
 }
 p {
     margin: auto;
@@ -268,46 +279,59 @@ p {
     margin-top: 10px;
     
 }
+#about .row .jumbotron .col-md-4 p>button:hover{
+    background-color:rgba(24, 23, 22, 0.2);
+    color: #D36F35;
+}
 #test{
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     width: 40%;
-    background-color: #D36F35;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
+    background-color:rgba(24, 23, 22, 0.5);
+    color: #d19877;
+    border-radius: 12px;
+    padding: 8px;
 }
 /*Input tab css*/
 
 #input{
-
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 
 }
 
 h2{
-
-
+/* color: #d19877; */
+/* float: left; */
+margin-bottom: 3px;
+border-style: double;
+border-width: 5px;
+border-color: #D36F35;
 }
 
 h3 {
     margin: auto;
     margin-bottom: 20px;
     margin-top: 20px;
-    background-color: lightgrey;
+    /* background; */
     padding: 15px;
     text-align: center;
-    width: 50%;
+    width: 90%;
+    border-style: double;
+    border-width: 5px;
+    border-color: #D36F35;
 }
 
 h4 {
     margin: auto;
     margin-bottom: 20px;
-    margin-top: 20px;
-    background-color: lightgrey;
-    padding: 15px;
+    margin-top: 0px;
+    /* background-color: lightgrey; */
+    padding: 10px;
     text-align: center;
-    width: 50%;
+    width: 90%;
 }
 
 
@@ -317,7 +341,24 @@ form {
     margin-bottom: 40px;
     margin-top: 40px;
 }
-
+form input::placeholder{
+    color: #D36F35;
+}
+.form-control{
+    background-color:rgba(255, 255, 255, 0.5);
+    color: #da5000;
+}
+#submit{
+    background-color:rgba(24, 23, 22, 0.5);
+    color: #d19877;
+    border-radius: 12px;
+    padding: 8px;
+    text-shadow: 2px 2px 4px #000000;
+}
+.fade form>#submit:hover{
+    background-color:rgba(24, 23, 22, 0.2);
+    color: #D36F35;
+}
 #missionStatementBox{
 height: 400px;
 

@@ -16,6 +16,7 @@ $(document).ready(function () {
         var database = firebase.database();
     
         var text;
+        var name;
         var count = 0;
 
         var readScore = 0
@@ -61,13 +62,30 @@ $(document).ready(function () {
         var buzzWordsFoundArray = [];
         var buzzWordsFound = buzzWordsFoundArray.join(", ");
     
+
+        // console.log("mission statement",$("#missionStatement").text());
     
         // click function that takes the input, parses for words in buzzWordCheck and highlights them.
         // It allows counts each words found and displays it.
     
-        $("#submit").on("click", function (event) {
-            event.preventDefault();
-            //destroy chart so they can be redrawn
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+        text = $("#textarea").val().trim();
+        theFunction();
+    }); // end of click function
+
+    $("#test").on("click", function (event) {
+        event.preventDefault();
+        text = $("#missionStatement").text().trim();
+        theFunction();
+    });
+
+
+    function theFunction(){
+
+        $('#nav li:last-child a').tab('show');
+
+         //destroy chart so they can be redrawn
             // LangChart.destroy();
             // compChart.destroy();
             // SentChart.destroy();
@@ -76,12 +94,13 @@ $(document).ready(function () {
             
             count = 0;
     
-            var name = $("#name").val();
+            name = $("#name").val().trim();
+            console.log(name);
             buzzWordsFoundArray = [];
             var readability;
             var sentiment;
     
-            text = $("#textarea").val();
+            // text = $("#textarea").val();
             console.log(text);
     
             //// Watson Api
@@ -199,7 +218,7 @@ $(document).ready(function () {
     
                 // var fixed = test.replace( "/" + wordsToCheck[i] + "/g", "<span class='highlight'>" + wordsToCheck[i] + "</span>");
                 // var test = test.replace(word, "<span class='highlight'>" + wordsToCheck[i] + "</span>");
-                var text = text.replace(word, function (x) {
+                text = text.replace(word, function (x) {
                     count++;
                     console.log("count" + count);
                     buzzWordsFoundArray.push(x);
@@ -207,7 +226,8 @@ $(document).ready(function () {
                 });
     
                 $("#key-word-results").empty();
-                $("#key-word-results").append(text);
+                var textDiv = $("<div id='keywords'></div>").append(text);
+                $("#key-word-results").append(textDiv);
     
                 // console.log(word.test(text));
     
@@ -260,7 +280,7 @@ $(document).ready(function () {
             // if no words are found the data is not pushed to the table(testimonials)/firebase
     
             function push() {
-                if (count > 0) {
+                if ((count > 0) && (name !== "")) {
                     //push to  tesimonials
                     database.ref("testimonials").push({
     
@@ -277,14 +297,13 @@ $(document).ready(function () {
                     });
                 }
     
-                
                 tableDisplay();
             }
+        } // end of the function
+        
     
-        }); // end of click function
-    
-    
-    
+
+
         // table display function. (wrapped in a function so it can be called and kept to most recent tables)
     
         function tableDisplay() {
@@ -363,9 +382,11 @@ $(document).ready(function () {
             $("#sentiment-compare-div").empty();
     
         
-            $("#sentiment-div").append($('<canvas id="sentiment-chart" width="1600" height="900"></canvas>'));
-            $("#sentiment-compare-div").append($('<canvas id="sentiment-compare-chart" width="1600" height="900"></canvas>'));
-            $("#level-div").append($('<canvas id="level-compare-chart" width="1600" height="900"></canvas>'));
+            $("#sentiment-div").append($('<canvas id="sentiment-chart"></canvas>'));
+            $("#sentiment-compare-div").append($('<canvas id="sentiment-compare-chart"></canvas>'));
+            $("#level-div").append($('<canvas id="level-compare-chart"></canvas>'));
+
+            // width = "1600" height = "900"
             
             sentimentChart = $("#sentiment-chart");
             sentimentChart.show();
@@ -381,7 +402,7 @@ $(document).ready(function () {
                 data: {
                     labels: ["Anger", "Fear", "Joy", "Sadness", "Analytical", "confident", "tentative"],
                     datasets: [{
-                        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+                        backgroundColor: ["#c45850", "#8e5ea2", "#3cba9f", "#e8c3b9", "#3e95cd", "#50c451","#c4c250"],
                         data: [anger, fear, joy, sadness, analytical, confident, tentative] //this is where we'll connect results
                     }]
                 },

@@ -14,7 +14,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" media="screen" href="Frankly.css">
     <!--scripts for the js-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     <script src="Frankly.js"></script>
@@ -151,25 +151,21 @@
 
                     <div class="col-md-4">
 
-                        <p id="missionStatement">
 
-                            We do a dive deep so we can drill down and provide our users with a 10,000 foot view of the situation on the ground. This
-                            method may not be a paradigm shift but, at the end of the day, we at Fankly strive hard to deliver
-                            desirable deliverables to our users making full use of our core competency on the material with consideration
-                            to best practice.Perhaps it is blue-sky thinking to consider this project a game-changer. Yet the
-                            Frankly team wholly believes in its "talk turkey" style of coding and we are confident that we are
-                            not cutting our users a rubber check.
+                    <!-- The comments here are used to prevent new line character from being entered into the ajax requests -->
+                    <p id="missionStatement">
+                        We do a dive deep so we can drill down and provide our users with a 10,000 foot view of the situation on the ground.<!-- 
+                        --> This method may not be a paradigm shift but, at the end of the day, we at Fankly strive hard to deliver desirable deliverables<!--
+                        --> to our users making full use of our core competency on the material with consideration to best practice.Perhaps it is blue-sky thinking<!--
+                        --> to consider this project a game-changer. Yet the Frankly team wholly believes in its "talk turkey" style of coding and we are confident that<!--
+                        --> we are not cutting our users a rubber check.
+                    </p>
 
+                    <!--this button needs to be modified-->
+                        <button id="test">Put our words<br> to the test!!</button>
 
+                </div>
 
-    <!--this button needs to be modified-->
-                            <button onclick="counterFunction()" id="test">Put our words
-
-                                <br> to the test!!</button>
-
-                        </p>
-
-                    </div>
                 </div>
 
 
@@ -255,29 +251,35 @@
                     <li data-target="#carousel-results" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-results" data-slide-to="1"></li>
                     <li data-target="#carousel-results" data-slide-to="2"></li>
+                    <li data-target="#carousel-results" data-slide-to="3"></li>
                 </ol>
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <div id="sentiment-div"></div>
-                        <div class="carousel-caption">
+                        <!-- <div class="carousel-caption">
                             Sentiment Chart
-                        </div>
+                        </div> -->
                     </div>
                     <div class="item">
-                        <div id="level-div"></div>>
-                        <div class="carousel-caption">
+                        <div id="level-div"></div>
+                        <!-- <div class="carousel-caption">
                             Language Level Comparison
-                        </div>
+                        </div> -->
                     </div>
                     <div class="item">
                         <div id="sentiment-compare-div"></div>
-                        <div class="carousel-caption">
+                        <!-- <div class="carousel-caption">
                             Sentiment Comparison
-                        </div>
+                        </div> -->
                     </div>
-                    <div id="key-word-results"></div>
+                    <div class="item">
+                        <div id="key-word-results"></div>
+                        <!-- <div class="carousel-caption">
+                            Key Word Results
+                        </div> -->
+                    </div>
                 </div>
 
                 <!-- Controls -->

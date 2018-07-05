@@ -10,6 +10,7 @@ Watson Tone Analyzer API TwinWord API Chart.js Bootstrap
 Contributors
 Haley Belden
 GitHub Username: haleyb128
+contributed to Chart JS, CSS styling, decision-making process, API research, HTML Bootstrap format, and github interactions.
 Jacob Weaver
 GitHub Username: weaverjt
 Created basic HTML template, some CSS styling, basic github management, and contributed to project concept/scope.

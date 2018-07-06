@@ -19,3 +19,4 @@ GitHub Username: maellingson
 Researched and implemented the APIs and Ajax Requests. Created developer documentation, assited with editing and writing the text in the app.
 Sean Neppl
 GitHub Username: seanneppl
+Designed word search/highlight function. Integrated APIs and Ajax with Chart JS/Firebase. Design tweaks and insight. Integrated firebase data with table.

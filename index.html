@@ -23,73 +23,38 @@
 
 <body class="body">
 
-
-    <!--The Navbar/Header-->
-
-    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="navbar">
-
-
-
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
         <!--here are our page tabs-->
-
         <div class="container">
-
             <!-- <div role="tabpanel" id="headerTabs" class=""> -->
-                
             <div class="navbar-header">
-
-
-            <a href="#about">
-                <!--Our Frankly logo-->
-
-                <img src="assets/images/Frankly%20Bull%20Logo.png" alt="Frankly logo" id="logo">
-
-            </a>
-
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcollapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#about">
+                    <!--Our Frankly logo-->
+                    <img src="assets/images/Frankly%20Bull%20Logo.png" alt="Frankly logo" id="logo">
+                </a>
             </div>
-
-            <button class="navbar-toggler collapsed ml-auto" data-toggle="collapse" data-target="#page-nav-collapse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
             <!--The Nav-tabs-->
-        <div class="collapse navbar-collapse" id="page-nav-collapse">
-
-            <ul class="nav navbar-nav ml-auto" role="tablist" id="nav">
-
-                <li role="presentation" class="active">
-
-                    <a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a>
-
-                </li>
-
-                <li role="presentation">
-
-                    <a href="#input" aria-controls="input" role="tab" data-toggle="tab">Input</a>
-
-                </li>
-
-                <li role="presentation">
-
-                    <a href="#results" aria-controls="results" role="tab" data-toggle="tab">Results</a>
-
-                </li>
-
-            </ul>
+            <div class="collapse navbar-collapse" id="navcollapse">
+                <ul class="nav navbar-nav navbar-right" role="tablist" id="nav">
+                    <li role="presentation" class="active">
+                        <a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#input" aria-controls="input" role="tab" data-toggle="tab">Input</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#results" aria-controls="results" role="tab" data-toggle="tab">Results</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        </div>
-    
-        <!-- </div> -->
-
-        <!-- </div> -->
-
     </nav>
-
-
 
     <!--The content of each tab ("About", "Input", and "Results") is here-->
     <div class="tab-content">
@@ -100,7 +65,7 @@
                 
             <div class="row" id="firstRow">
 
-                <div class="jumbotron jumbotron-fluid">
+                <div class="jumbotron jumbotron-fluid" id="splash">
 
                     <!-- <p id="intro">
 
@@ -111,15 +76,11 @@
                     </p> -->
 
                     <p id="intro">
-
-                            The Frankly project empowers users to uncover business jargon that has become ubiquitous in corporate communications. We have all heard these common phrases that from a “30,000 foot view” are “real head-scratchers.” This project helps to uncover business buzzwords hiding in your everyday corporate texts.
-
+                        The Frankly project empowers users to uncover business jargon that has become ubiquitous in corporate communications. We have all heard these common phrases that from a “30,000 foot view” are “real head-scratchers.” This project helps to uncover business buzzwords hiding in your everyday corporate texts.
                     </p>
 
                     <p id="intro">
-
-                            With Frankly, simply enter text in the text box. Frankly accepts mission statements, your colleague’s emails, or any other text you want to scan. Frankly provides a buzzword count, an analysis of the complexity and overall sentiment. We take the big data approach by comparing the text you provide to a list of our commonly used buzzwords, just to make sure we circle back and provide you with firm answers.You can even cover your bases by adding your favorite buzzwords.
-
+                        With Frankly, simply enter text in the text box. Frankly accepts mission statements, your colleague’s emails, or any other text you want to scan. Frankly provides a buzzword count, an analysis of the complexity and overall sentiment. We take the big data approach by comparing the text you provide to a list of our commonly used buzzwords, just to make sure we circle back and provide you with firm answers.You can even cover your bases by adding your favorite buzzwords.
                     </p>
 
                     <p class="lead" id="lead">
@@ -245,7 +206,7 @@
 
         <!--results tab-->
         <div role="tabpanel" class="tab-pane fade" id="results">
-            <div id="carousel-results" class="carousel slide" data-ride="carousel">
+            <div id="carousel-results" class="carousel slide" data-ride="carousel" data-interval="false">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#carousel-results" data-slide-to="0" class="active"></li>
@@ -258,27 +219,27 @@
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <div id="sentiment-div"></div>
-                        <!-- <div class="carousel-caption">
+                        <div class="carousel-caption">
                             Sentiment Chart
-                        </div> -->
+                        </div>
                     </div>
                     <div class="item">
                         <div id="level-div"></div>
-                        <!-- <div class="carousel-caption">
+                        <div class="carousel-caption">
                             Language Level Comparison
-                        </div> -->
+                        </div>
                     </div>
                     <div class="item">
                         <div id="sentiment-compare-div"></div>
-                        <!-- <div class="carousel-caption">
+                        <div class="carousel-caption">
                             Sentiment Comparison
-                        </div> -->
+                        </div>
                     </div>
                     <div class="item">
                         <div id="key-word-results"></div>
-                        <!-- <div class="carousel-caption">
+                        <div class="carousel-caption">
                             Key Word Results
-                        </div> -->
+                        </div>
                     </div>
                 </div>
 

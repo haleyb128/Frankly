@@ -85,12 +85,14 @@ $(document).ready(function () {
     $("#submit").on("click", function (event) {
         event.preventDefault();
         text = $("#textarea").val().trim();
+        searchText = $("#textarea").val().trim();
         theFunction();
     }); // end of click function
 
     $("#test").on("click", function (event) {
         event.preventDefault();
         text = $("#missionStatement").text().trim();
+        searchText = $("#missionStatement").text().trim();
         theFunction();
     });
 
@@ -121,7 +123,7 @@ $(document).ready(function () {
         // let users input their own words to search for
         if ($("#additionalWords").val() !== "") {
 
-            var aw = $("#additionalWords").val().split(", ");
+            var aw = $("#additionalWords").val().trim().split(", ");
             Array.prototype.push.apply(buzzWordCheck, aw);
             // console.log(wordsToCheck);
         }
@@ -177,7 +179,7 @@ $(document).ready(function () {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21&text=" + text,
+            "url": "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21&text=" + searchText,
             "method": "GET",
             "headers": {
                 "Authorization": watsonAuth,
@@ -231,7 +233,7 @@ $(document).ready(function () {
             "async": true,
             "crossDomain": true,
             // langauge scoring       
-            "url": "https://twinword-language-scoring.p.mashape.com/text/?text=" + text,
+            "url": "https://twinword-language-scoring.p.mashape.com/text/?text=" + searchText,
             "method": "GET",
             "headers": {
                 "X-Mashape-Key": twinKey,

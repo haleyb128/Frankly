@@ -1,5 +1,5 @@
 # Frankly
-[Frankly](https://violetproject.herokuapp.com/index.html) . 
+[Frankly](https://violetproject.herokuapp.com/index.html)  
 The Frankly project empowers users to uncover business jargon that has become ubiquitous in corporate communications. We have
 all heard these common phrases that from a “30,000 foot view” are “real head-scratchers.” This project helps to uncover
 business buzzwords hiding in your everyday corporate texts. 
